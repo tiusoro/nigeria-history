@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The History of Nigeria | 1960 - Present</title>
+    <style>
+        :root {
+            --nigeria-green: #008751;
+            --nigeria-white: #ffffff;
+            --dark-bg: #1a1a2e;
+            --card-bg: #16213e;
+            --text-primary: #e94560;
+            --text-secondary: #a0a0a0;
+            --accent-gold: #ffd700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #0f0f23 100%);
+            color: #eee;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,135,81,0.9) 0%, rgba(0,0,0,0.8) 100%);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
+            background-size: 100px;
+            opacity: 0.3;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .flag {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .date-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 25px;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Navigation */
+        .nav-container {
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: rgba(255,255,255,0.05);
+        }
+
+        nav a:hover {
+            background: var(--nigeria-green);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: var(--accent-gold);
+            border-left: 5px solid var(--nigeria-green);
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2 .icon {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px;
+            color: #fff;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 25px 0;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0,135,81,0.3);
+        }
+
+        .chart-container {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .chart-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .insight-box {
+            background: linear-gradient(135deg, rgba(0,135,81,0.2) 0%, rgba(0,0,0,0.3) 100%);
+            border-left: 4px solid var(--nigeria-green);
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        th {
+            background: var(--nigeria-green);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        td {
+            padding: 14px 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        tr:hover {
+            background: rgba(255,255,255,0.03);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .badge-civilian { background: rgba(76,175,80,0.2); color: #4caf50; }
+        .badge-military { background: rgba(244,67,54,0.2); color: #f44336; }
+        .badge-interim { background: rgba(255,152,0,0.2); color: #ff9800; }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--card-bg) 0%, rgba(0,135,81,0.1) 100%);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent-gold);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Era Cards */
+        .era-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .era-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid;
+            transition: all 0.3s;
+        }
+
+        .era-card:hover {
+            transform: translateX(10px);
+        }
+
+        .era-card.green { border-left-color: #4caf50; }
+        .era-card.red { border-left-color: #f44336; }
+        .era-card.blue { border-left-color: #2196f3; }
+        .era-card.purple { border-left-color: #9c27b0; }
+        .era-card.orange { border-left-color: #ff9800; }
+
+        .era-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .era-card .period {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0,0,0,0.5);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        footer p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0f0f23;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--nigeria-green);
+            border-radius: 5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            h2 { font-size: 1.6rem; }
+            .container { padding: 20px 15px; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 10px; }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <span class="flag">🇳🇬</span>
+        <h1>The History of Nigeria</h1>
+        <p>A comprehensive interactive guide to Nigeria's political evolution, population growth, and leadership from independence to the present day.</p>
+        <div class="date-badge">📅 October 1, 1960 — Present</div>
+    </header>
+
+    <!-- Navigation -->
+    <div class="nav-container">
+        <nav>
+            <a href="#overview">📋 Overview</a>
+            <a href="#population">📈 Population</a>
+            <a href="#parties">🏛️ Parties</a>
+            <a href="#leaders">👑 Leaders</a>
+            <a href="#stats">📊 Statistics</a>
+            <a href="#states">🗺️ States</a>
+            <a href="#eras">📚 Eras</a>
+        </nav>
+    </div>
+
+    <div class="container">
+
+        <!-- Overview -->
+        <section id="overview">
+            <h2><span class="icon">📋</span> Overview</h2>
+            <div class="card">
+                <p>Nigeria, the <strong>"Giant of Africa,"</strong> gained independence from Britain on <strong>October 1, 1960</strong>. Since then, it has navigated through civilian republics, military dictatorships, a devastating civil war, and the longest period of uninterrupted democracy in its history.</p>
+                <br>
+                <p>With a population projected to reach <strong>239 million by 2026</strong>, Nigeria remains Africa's most populous nation and one of its most politically dynamic countries.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">66</span>
+                    <div class="stat-label">Years of Independence</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">17</span>
+                    <div class="stat-label">Leaders Since 1960</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">239M</span>
+                    <div class="stat-label">Population (2026 est.)</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">36</span>
+                    <div class="stat-label">States + FCT</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Population -->
+        <section id="population">
+            <h2><span class="icon">📈</span> Population Growth (1960 – 2026)</h2>
+            <div class="chart-container">
+                <img src="nigeria_population.png" alt="Nigeria Population Growth Chart">
+            </div>
+            <div class="insight-box">
+                <strong>Key Insight:</strong> Nigeria's population has grown exponentially—from <strong>45.1 million at independence</strong> to an estimated <strong>232.7 million in 2024</strong>, representing a staggering <strong>415% increase</strong> over 64 years. The country is projected to reach <strong>244 million by 2027</strong>.
+            </div>
+        </section>
+
+        <!-- Political Parties -->
+        <section id="parties">
+            <h2><span class="icon">🏛️</span> Political Parties & Government Eras</h2>
+            <div class="chart-container">
+                <img src="nigeria_parties_timeline.png" alt="Nigeria Political Parties Timeline">
+            </div>
+
+            <div class="card">
+                <h3>Party Evolution by Era</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Era</th>
+                            <th>Period</th>
+                            <th>Dominant Parties</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pre-Independence</strong></td>
+                            <td>1923–1959</td>
+                            <td>NNDP, NCNC, AG, NPC</td>
+                            <td>First parties founded by nationalists like Herbert Macaulay</td>
+                        </tr>
+                        <tr>
+                            <td><strong>First Republic</strong></td>
+                            <td>1960–1966</td>
+                            <td>NPC, NCNC, AG</td>
+                            <td>Regional parties representing North, East, and West</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Military Rule</strong></td>
+                            <td>1966–1979</td>
+                            <td><em>Banned</em></td>
+                            <td>No political activity allowed</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Second Republic</strong></td>
+                            <td>1979–1983</td>
+                            <td>NPN, UPN, NPP, GNPP, PRP</td>
+                            <td>Five-party system created by FEDECO</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Military Rule</strong></td>
+                            <td>1983–1993</td>
+                            <td><em>Banned</em></td>
+                            <td>Parties proscribed by military decrees</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Interim</strong></td>
+                            <td>1993</td>
+                            <td>SDP, NRC</td>
+                            <td>Elections annulled by Babangida</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Military Rule</strong></td>
+                            <td>1993–1999</td>
+                            <td><em>Banned</em></td>
+                            <td>Abacha and Abubakar regimes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fourth Republic</strong></td>
+                            <td>1999–Present</td>
+                            <td><strong>PDP, APC</strong> (+19 others)</td>
+                            <td>APC ended PDP's 16-year dominance in 2015</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box">
+                <strong>Current Status:</strong> As of 2026, there are <strong>21 INEC-registered political parties</strong> in Nigeria, though the APC (ruling) and PDP (main opposition) dominate national politics.
+            </div>
+        </section>
+
+        <!-- Leaders -->
+        <section id="leaders">
+            <h2><span class="icon">👑</span> Heads of State & Presidents Timeline</h2>
+            <div class="chart-container">
+                <img src="nigeria_leaders_timeline.png" alt="Nigeria Leaders Timeline">
+            </div>
+
+            <div class="card">
+                <h3>Complete List of Leaders</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Title</th>
+                            <th>Period</th>
+                            <th>Duration</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Abubakar Tafawa Balewa</strong></td>
+                            <td>Prime Minister</td>
+                            <td>Oct 1960 – Jan 1966</td>
+                            <td>5.3 yrs</td>
+                            <td><span class="badge badge-civilian">Civilian</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Nnamdi Azikiwe</strong></td>
+                            <td>President (1st Republic)</td>
+                            <td>Oct 1963 – Jan 1966</td>
+                            <td>2.3 yrs</td>
+                            <td><span class="badge badge-civilian">Civilian</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>Johnson Aguiyi-Ironsi</strong></td>
+                            <td>Military Head of State</td>
+                            <td>Jan 1966 – Jul 1966</td>
+                            <td>0.5 yrs</td>
+                            <td><span class="badge badge-military">Military</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><strong>Yakubu Gowon</strong></td>
+                            <td>Military Head of State</td>
+                            <td>Aug 1966 – Jul 1975</td>
+                            <td><strong>8.9 yrs</strong></td>
+                            <td><span class="badge badge-military">Military</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>Murtala Muhammed</strong></td>
+                            <td>Military Head of State</td>
+                            <td>Jul 1975 – Feb 1976</td>
+                            <td>0.6 yrs</td>
+                            <td><span class="badge badge-military">Military</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><strong>Olusegun Obasanjo</strong></td>
+                            <td>Military Head of State</td>
+                            <td>Feb 1976 – Oct 1979</td>
+                            <td>3.6 yrs</td>
+                            <td><span class="badge badge-military">Military</span></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><strong>Shehu Shagari</strong></td>
+                            <td>President (2nd Republic)</td>
+                            <td>Oct 1979 – Dec 1983</td>
+                            <td>4.2 yrs</td>
+                            <td><span class="badge badge-civilian">Civilian</span></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><strong>Muhammadu Buhari</strong></td>
+                            <td>Military Head of State</td>
+                            <td>Dec 1983 – Aug 1985</td>
+                            <td>1.6 yrs</td>
+                            <td><span class="badge badge-military">Military</span></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><strong>Ibrahim Babangida</strong></td>
+                            <td>Military President</td>
+                            <td>Aug 1985 – Aug 1993</td>
+                            <td><strong>8.0 yrs</strong></td>
+                            <td><span class="badge badge-military">Military</span></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><strong>Ernest Shonekan</strong></td>
+                            <td>Interim Head of State</td>
+                            <td>Aug 1993 – Nov 1993</td>
+                            <td>0.2 yrs</td>
+                            <td><span class="badge badge-interim">Interim</span></td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><strong>Sani Abacha</strong></td>
+                            <td>Military Head of State</td>
+                            <td>Nov 1993 – Jun 1998</td>
+                            <td>4.6 yrs</td>
+                            <td><span class="badge badge-military">Military</span></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><strong>Abdulsalami Abubakar</strong></td>
+                            <td>Military Head of State</td>
+                            <td>Jun 1998 – May 1999</td>
+                            <td>0.9 yrs</td>
+                            <td><span class="badge badge-military">Military</span></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td><strong>Olusegun Obasanjo</strong></td>
+                            <td>President (4th Republic)</td>
+                            <td>May 1999 – May 2007</td>
+                            <td>8.0 yrs</td>
+                            <td><span class="badge badge-civilian">Civilian</span></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td><strong>Umaru Yar'Adua</strong></td>
+                            <td>President (4th Republic)</td>
+                            <td>May 2007 – May 2010</td>
+                            <td>2.9 yrs</td>
+                            <td><span class="badge badge-civilian">Civilian</span></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td><strong>Goodluck Jonathan</strong></td>
+                            <td>President (4th Republic)</td>
+                            <td>May 2010 – May 2015</td>
+                            <td>5.0 yrs</td>
+                            <td><span class="badge badge-civilian">Civilian</span></td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td><strong>Muhammadu Buhari</strong></td>
+                            <td>President (4th Republic)</td>
+                            <td>May 2015 – May 2023</td>
+                            <td>8.0 yrs</td>
+                            <td><span class="badge badge-civilian">Civilian</span></td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td><strong>Bola Tinubu</strong></td>
+                            <td>President (4th Republic)</td>
+                            <td>May 2023 – Present</td>
+                            <td>3+ yrs</td>
+                            <td><span class="badge badge-civilian">Civilian</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box">
+                <strong>Notable Records:</strong> Yakubu Gowon (8.9 years) and Ibrahim Babangida (8.0 years) hold the records for longest continuous rule. Olusegun Obasanjo is the only person to lead Nigeria both as a military head of state and as an elected civilian president.
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section id="stats">
+            <h2><span class="icon">📊</span> Government Type Statistics</h2>
+            <div class="chart-container">
+                <img src="nigeria_gov_stats.png" alt="Nigeria Government Statistics">
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">~29</span>
+                    <div class="stat-label">Years Under Military Rule</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">~37</span>
+                    <div class="stat-label">Years Under Civilian Rule</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">6</span>
+                    <div class="stat-label">Successful Coups</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">3</span>
+                    <div class="stat-label">Civilian Transitions</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- States -->
+        <section id="states">
+            <h2><span class="icon">🗺️</span> Evolution of Nigeria's States</h2>
+            <div class="chart-container">
+                <img src="nigeria_states.png" alt="Nigeria States Evolution">
+            </div>
+
+            <div class="card">
+                <h3>State Creation Timeline</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Number</th>
+                            <th>Event</th>
+                            <th>Leader</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1960</td>
+                            <td>3</td>
+                            <td>Three Regions (North, West, East)</td>
+                            <td>Colonial Structure</td>
+                        </tr>
+                        <tr>
+                            <td>1963</td>
+                            <td>4</td>
+                            <td>Midwest Region created</td>
+                            <td>Balewa / Azikiwe</td>
+                        </tr>
+                        <tr>
+                            <td>1967</td>
+                            <td>12</td>
+                            <td>12-State structure</td>
+                            <td>Yakubu Gowon</td>
+                        </tr>
+                        <tr>
+                            <td>1976</td>
+                            <td>19</td>
+                            <td>7 new states created</td>
+                            <td>Murtala / Obasanjo</td>
+                        </tr>
+                        <tr>
+                            <td>1987</td>
+                            <td>21</td>
+                            <td>2 new states created</td>
+                            <td>Ibrahim Babangida</td>
+                        </tr>
+                        <tr>
+                            <td>1991</td>
+                            <td>30</td>
+                            <td>9 new states created</td>
+                            <td>Ibrahim Babangida</td>
+                        </tr>
+                        <tr>
+                            <td>1996</td>
+                            <td>36</td>
+                            <td>6 new states created</td>
+                            <td>Sani Abacha</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Eras -->
+        <section id="eras">
+            <h2><span class="icon">📚</span> Detailed Era Breakdown</h2>
+
+            <div class="era-grid">
+                <div class="era-card green">
+                    <h4>🟢 First Republic (1963–1966)</h4>
+                    <div class="period">October 1963 – January 1966</div>
+                    <p>Nigeria became a republic with Nnamdi Azikiwe as ceremonial President and Abubakar Tafawa Balewa as Prime Minister. The government was dominated by the <strong>NPC-NCNC coalition</strong>. It ended violently with the <strong>January 15, 1966 coup</strong> led by Major Kaduna Nzeogwu.</p>
+                </div>
+
+                <div class="era-card red">
+                    <h4>🔴 Military Interregnum I (1966–1979)</h4>
+                    <div class="period">January 1966 – October 1979</div>
+                    <p><strong>Aguiyi-Ironsi</strong> (1966): Assassinated after 6 months.<br><strong>Gowon</strong> (1966–1975): Longest-serving leader; led through the <strong>Biafran Civil War (1967–1970)</strong>; created 12 states.<br><strong>Murtala</strong> (1975–1976): Assassinated; created 7 new states.<br><strong>Obasanjo</strong> (1976–1979): Handed power to civilians—rare move for a military leader.</p>
+                </div>
+
+                <div class="era-card blue">
+                    <h4>🔵 Second Republic (1979–1983)</h4>
+                    <div class="period">October 1979 – December 1983</div>
+                    <p><strong>Shehu Shagari</strong> of the <strong>National Party of Nigeria (NPN)</strong> won the 1979 elections. His government was marred by electoral fraud allegations and economic decline. Overthrown on <strong>December 31, 1983</strong> by Major-General Muhammadu Buhari.</p>
+                </div>
+
+                <div class="era-card red">
+                    <h4>🔴 Military Interregnum II (1983–1999)</h4>
+                    <div class="period">December 1983 – May 1999</div>
+                    <p><strong>Buhari</strong> (1983–1985): "War Against Indiscipline."<br><strong>Babangida</strong> (1985–1993): Longest military rule; annulled the <strong>June 12, 1993 election</strong>.<br><strong>Shonekan</strong> (1993): Interim government, 3 months.<br><strong>Abacha</strong> (1993–1998): Most repressive regime; died mysteriously.<br><strong>Abubakar</strong> (1998–1999): Organized rapid transition to democracy.</p>
+                </div>
+
+                <div class="era-card purple">
+                    <h4>🟣 Fourth Republic (1999–Present)</h4>
+                    <div class="period">May 1999 – Present</div>
+                    <p>The longest period of uninterrupted democracy:<br><strong>Obasanjo</strong> (1999–2007): PDP; economic reforms; debt relief.<br><strong>Yar'Adua</strong> (2007–2010): PDP; died in office.<br><strong>Jonathan</strong> (2010–2015): PDP; conceded 2015 election—historic peaceful transfer.<br><strong>Buhari</strong> (2015–2023): APC; anti-corruption war.<br><strong>Tinubu</strong> (2023–Present): APC; current president.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>🇳🇬 The History of Nigeria | Data compiled from Premium Times, Nigerian State House, Statista, World Bank, and other public sources.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">Last updated: April 2026</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>
+
